@@ -52,6 +52,8 @@ class Dog
     a = self.all.detect {|dog| dog.name == name, dog.breed == breed}
     if a != nil
       a[0]
+    else
+      self.create(name: name, breed: breed)
     end
   end
 
